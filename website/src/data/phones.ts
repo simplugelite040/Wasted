@@ -37,6 +37,8 @@ export const phones: PhoneModel[] = [
     tagline: 'Balanced. Configured.',
     description: 'A balanced everyday device with a newer hardware generation and the full SPEX privacy configuration.',
     finish: 'slate',
+    image: '/images/phones/pixel-8a.webp',
+    imageSrcset: '/images/phones/pixel-8a.webp 1x, /images/phones/pixel-8a@2x.webp 2x',
   },
   {
     id: 'spex-9a',
@@ -45,6 +47,8 @@ export const phones: PhoneModel[] = [
     tagline: 'More generation. Same discipline.',
     description: 'A newer generation for customers who want extra headroom with the same privacy-first setup.',
     finish: 'obsidian',
+    image: '/images/phones/pixel-9a.webp',
+    imageSrcset: '/images/phones/pixel-9a.webp 1x, /images/phones/pixel-9a@2x.webp 2x',
   },
   {
     id: 'spex-10a',
@@ -62,6 +66,8 @@ export const phones: PhoneModel[] = [
     tagline: 'The flagship SPEX.',
     description: 'The most capable SPEX device — premium hardware and display, configured for demanding private use.',
     finish: 'titanium',
+    image: '/images/phones/pixel-10-pro.webp',
+    imageSrcset: '/images/phones/pixel-10-pro.webp 1x, /images/phones/pixel-10-pro@2x.webp 2x',
     badge: 'Flagship',
   },
 ];
