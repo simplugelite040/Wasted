@@ -57,6 +57,8 @@ export const phones: PhoneModel[] = [
     tagline: 'The current standard.',
     description: 'The latest a-series SPEX — modern hardware, long-term outlook and the complete SPEX configuration.',
     finish: 'midnight',
+    image: '/images/phones/pixel-10a.webp',
+    imageSrcset: '/images/phones/pixel-10a.webp 1x, /images/phones/pixel-10a@2x.webp 2x',
     badge: 'Recommended',
   },
   {
