@@ -45,7 +45,7 @@ const others = phones.filter((p) => p.id !== phone.id);
         <div class="model__glow"></div>
         {
           phone.image ? (
-            <img src={phone.image} alt="" class="model__img" decoding="async" />
+            <img src={phone.image} srcset={phone.imageSrcset} alt="" class="model__img" width="600" height="600" decoding="async" />
           ) : (
             <>
               <div class="model__back"><PhoneRender view="back" finish={phone.finish} label={phone.name} /></div>

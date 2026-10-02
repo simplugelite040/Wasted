@@ -13,8 +13,10 @@ export interface PhoneModel {
   /** Visual finish used by the device render. */
   finish: 'graphite' | 'slate' | 'obsidian' | 'midnight' | 'titanium';
   badge?: string;
-  /** Optional product photo in /public (e.g. "/images/phones/spex-10a.webp"). Falls back to the device render. */
+  /** Optional product photo in /public (e.g. "/images/phones/pixel-10a.webp"). Falls back to the device render. */
   image?: string;
+  /** Optional higher-resolution versions of the photo, e.g. "/images/phones/pixel-7a@2x.webp 2x". */
+  imageSrcset?: string;
 }
 
 export const phones: PhoneModel[] = [
@@ -25,6 +27,8 @@ export const phones: PhoneModel[] = [
     tagline: 'The essential SPEX.',
     description: 'The most accessible way into the SPEX ecosystem — GrapheneOS, configured and ready for daily private use.',
     finish: 'graphite',
+    image: '/images/phones/pixel-7a.webp',
+    imageSrcset: '/images/phones/pixel-7a.webp 1x, /images/phones/pixel-7a@2x.webp 2x',
   },
   {
     id: 'spex-8a',

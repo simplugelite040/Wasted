@@ -53,8 +53,12 @@ const routerSingle = router.pricing[0]!.price;
           kits.map((k, i) => (
             <li class:list={['kit', k.featured && 'kit--featured']} data-reveal data-reveal-delay={String((i % 3) + 1)}>
               <div class="kit__visual" aria-hidden="true">
-                <div class="kit__phone">
-                  <PhoneRender view="back" finish={k.phone.finish} label={k.phone.name} />
+                <div class:list={['kit__phone', k.phone.image && 'kit__phone--photo']}>
+                  {k.phone.image ? (
+                    <img src={k.phone.image} srcset={k.phone.imageSrcset} alt="" width="600" height="600" loading="lazy" decoding="async" />
+                  ) : (
+                    <PhoneRender view="back" finish={k.phone.finish} label={k.phone.name} />
+                  )}
                 </div>
                 <div class="kit__router">
                   <RouterRender />
@@ -232,6 +236,16 @@ const routerSingle = router.pricing[0]!.price;
     left: 52%;
     top: 0;
     z-index: 2;
+  }
+  .kit__phone--photo {
+    width: 56%;
+    left: 42%;
+    top: -8%;
+  }
+  .kit__phone--photo img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
   .kit__router {
     width: 62%;

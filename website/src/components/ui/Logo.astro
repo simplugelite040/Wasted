@@ -15,7 +15,7 @@ const { class: className, sub = true, size = 'default' } = Astro.props;
     <img class:list={['logo-large', className]} src={brand.logo.large} alt={brand.logo.alt} width="635" height="720" loading="lazy" decoding="async" />
   ) : (
     <span class:list={['logo', className]}>
-      <img class="logo__mark" src={brand.logo.small} alt="" width="141" height="160" decoding="async" />
+      <img class="logo__mark" src={brand.logo.small} srcset={brand.logo.smallSrcset} alt="" width="49" height="56" decoding="async" />
       <span class="logo__text">
         <span class="logo__name">SPEX</span>
         {sub && <span class="logo__sub">SIMPLUGELITE</span>}
@@ -32,8 +32,7 @@ const { class: className, sub = true, size = 'default' } = Astro.props;
   }
   .logo__mark {
     width: auto;
-    height: 50px;
-    filter: drop-shadow(0 4px 16px rgba(47, 123, 255, 0.35));
+    height: 56px;
   }
   .logo-large {
     width: auto;

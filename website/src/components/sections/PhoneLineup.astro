@@ -20,7 +20,7 @@ import { eur } from '../../lib/format';
           <li data-reveal data-reveal-delay={String((i % 4) + 1)}>
             <a href={`/phones/${p.id}`} class="lineup__item">
               <div class="lineup__device">
-                {p.image ? <img src={p.image} alt="" loading="lazy" decoding="async" /> : <PhoneRender view="back" finish={p.finish} label={p.name} />}
+                {p.image ? <img class="lineup__photo" src={p.image} srcset={p.imageSrcset} alt="" width="600" height="600" loading="lazy" decoding="async" /> : <PhoneRender view="back" finish={p.finish} label={p.name} />}
               </div>
               <span class="lineup__name">{p.name}</span>
               <span class="lineup__price">{eur(p.price)}</span>
@@ -74,6 +74,11 @@ import { eur } from '../../lib/format';
   .lineup__device :global(svg),
   .lineup__device img {
     filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.8));
+  }
+  .lineup__device:has(.lineup__photo) {
+    width: 100%;
+    max-width: 200px;
+    margin-block: -1.25rem 0.25rem;
   }
   .lineup__item:hover .lineup__device {
     transform: translateY(-8px);

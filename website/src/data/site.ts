@@ -13,7 +13,9 @@ export const brand = {
   outOfBox: 'Ready to use out of the box.',
   /** Official logo files in /public/images/brand. Replace the files to update the logo everywhere. */
   logo: {
-    small: '/images/brand/spex-logo-160.png',
+    /** Header mark: exact 1x / 2x / 3x sizes so it stays sharp on every screen. */
+    small: '/images/brand/spex-logo-h56.png',
+    smallSrcset: '/images/brand/spex-logo-h56.png 1x, /images/brand/spex-logo-h112.png 2x, /images/brand/spex-logo-h168.png 3x',
     large: '/images/brand/spex-logo.webp',
     alt: 'SIMPLUGELITE / SPEX logo',
   },

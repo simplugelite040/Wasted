@@ -16,7 +16,7 @@ const { phone, delay = 0 } = Astro.props;
     <div class="phone-card__glow"></div>
     {
       phone.image ? (
-        <img src={phone.image} alt="" loading="lazy" decoding="async" />
+        <img class="phone-card__photo" src={phone.image} srcset={phone.imageSrcset} alt="" width="600" height="600" loading="lazy" decoding="async" />
       ) : (
         <PhoneRender finish={phone.finish} view="back" label={phone.name} />
       )
@@ -69,6 +69,12 @@ const { phone, delay = 0 } = Astro.props;
     max-width: 170px;
     filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.8));
     transition: transform 0.7s var(--ease);
+  }
+  .phone-card__visual .phone-card__photo {
+    width: 78%;
+    max-width: 320px;
+    height: auto;
+    margin-block: -1.5rem -0.5rem;
   }
   .phone-card:hover .phone-card__visual :global(svg),
   .phone-card:hover .phone-card__visual img {
